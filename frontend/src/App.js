@@ -174,15 +174,11 @@ function Footer() {
 
                 <h1>Gastrointestinal Disease </h1>
                 <h2>H.Pylori Ab</h2>
-
-
-
                 <h1>Cardiac Marker </h1>
                 <h2>Troponin I </h2>
 
               </div>
             </div>
-
           </div>
           <div className="footerbox3">
             <h1>Contact Us</h1>
