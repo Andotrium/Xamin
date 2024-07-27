@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 // import logo from "./media/logo.jpeg";
 import banner1 from "./media/desktopbanner.jpg"
+import banner2 from "./media/mobilebanner.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faDroplet, faMosquito, faBaby, faLungs } from "@fortawesome/free-solid-svg-icons";
@@ -9,18 +10,9 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 
 
-function Header() {
+function Header({isMobile}) {
   const [scroll, setscroll] = useState(false);
-  const [width, setwidth] = useState(window.innerWidth);
-  let isMobile = width <= 768;
 
-  useEffect(() => {
-    const handleResize = () => {
-      setwidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -67,10 +59,11 @@ function AboutUs() {
 
   return (
     <>
-      <div className="textcontainer">
 
-        <h1 style={{ color: "rgb(59, 105, 166)", textAlign: "center", fontSize: "xx-large" }}> About Us </h1>
-        <h1>Welcome to Xamin by Diagnocure India</h1>
+      <div className="textcontainer">
+              <h1 style={{ color: "rgb(59, 105, 166)",fontSize:"xx-large", textAlign: "center", marginTop:"35px"}}> About Us </h1>
+
+        <h1 style={{marginTop:"30px"}}>Welcome to Xamin by Diagnocure India</h1>
 
         <h2>At Xamin, we are dedicated to revolutionizing healthcare through cutting-edge In-Vitro Diagnostics (IVD) kits. As a flagship brand of Diagnocure India, we leverage our extensive expertise and state-of-the-art technology to provide reliable, accurate, and efficient diagnostic solutions.</h2>
 
@@ -104,8 +97,9 @@ function AboutUs() {
   )
 }
 
-function Bannerwrap() {
+function Bannerwrap({isMobile}) {
   return (
+    <div className="outerwrap">
     <div className="wrap">
       <div className="box1">
         <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faDroplet} />
@@ -128,8 +122,10 @@ function Bannerwrap() {
         <h2>Our Respiratory IVD kits, including COVID-19 test kits, deliver accurate diagnostics for a range of respiratory conditions, enabling prompt and effective medical intervention.</h2>
       </div>
     </div>
+    </div>
   )
 }
+
 function Footer() {
   return (
     <>
@@ -197,19 +193,30 @@ function Footer() {
 
 
 export default function Myapp() {
+  const [width, setwidth] = useState(window.innerWidth);
+  let isMobile = width <= 768;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setwidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <div>
-        <Header />
+        <Header isMobile={isMobile}/>
       </div>
       <div className="headerblock">
       </div>
       <div className="banner">
-        <img src={banner1} style={{ width: "100%" }}></img>
+        <img src={isMobile?banner2:banner1} style={{ width: "100%" }}></img>
       </div>
       <div style={{ height: "45vh" }}></div>
       <Bannerwrap />
-      <div style={{ height: "25px" }}></div>
+      <div style={{ height: "0px" }}></div>
+
       <AboutUs />
       <Footer />
       <div className="copyright">
