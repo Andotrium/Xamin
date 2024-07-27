@@ -5,12 +5,12 @@ import banner1 from "./media/desktopbanner.jpg"
 import banner2 from "./media/mobilebanner.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faDroplet, faMosquito, faBaby, faLungs,faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faDroplet, faMosquito, faBaby, faLungs, faPlus, faWhatsapp} from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 
 
-function Header({isMobile}) {
+function Header({ isMobile }) {
   const [scroll, setscroll] = useState(false);
 
 
@@ -35,13 +35,13 @@ function DesktopDropdown() {
   return (
 
     <div className="desktopdropdown">
-      <h2>About Us</h2>
-      <h2>Our Products</h2>
-      <h2>Contact Us</h2>
-      <h2>Downloads</h2>
-      <h2>Updates</h2>
-      <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faMagnifyingGlass} />
-    </div>
+    <h2>About Us</h2>
+    <h2>Our Products</h2>
+    <h2>Contact Us</h2>
+    <h2>Downloads</h2>
+    <h2>Updates</h2>
+    <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faMagnifyingGlass} />
+  </div>
 
   );
 }
@@ -61,9 +61,9 @@ function AboutUs() {
     <>
 
       <div className="textcontainer">
-              <h1 style={{ color: "rgb(59, 105, 166)",fontSize:"xx-large", textAlign: "center", marginTop:"35px"}}> About Us </h1>
+        <h1 style={{ color: "rgb(59, 105, 166)", fontSize: "xx-large", textAlign: "center", marginTop: "35px" }}> About Us </h1>
 
-        <h1 style={{marginTop:"30px"}}>Welcome to Xamin by Diagnocure India</h1>
+        <h1 style={{ marginTop: "30px" }}>Welcome to Xamin by Diagnocure India</h1>
 
         <h2>At Xamin, we are dedicated to revolutionizing healthcare through cutting-edge In-Vitro Diagnostics (IVD) kits. As a flagship brand of Diagnocure India, we leverage our extensive expertise and state-of-the-art technology to provide reliable, accurate, and efficient diagnostic solutions.</h2>
 
@@ -97,31 +97,31 @@ function AboutUs() {
   )
 }
 
-function Bannerwrap({isMobile}) {
+function Bannerwrap({ isMobile }) {
   return (
     <div className="outerwrap">
-    <div className="wrap">
-      <div className="box1">
-        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faDroplet} />
-        <h1>Blood Borne</h1>
-        <h2>Our Blood Borne IVD kits provide precise detection of blood-borne pathogens, ensuring timely and accurate diagnoses for effective treatment and management.</h2>
+      <div className="wrap">
+        <div className="box1">
+          <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faDroplet} />
+          <h1>Blood Borne</h1>
+          <h2>Our Blood Borne IVD kits provide precise detection of blood-borne pathogens, ensuring timely and accurate diagnoses for effective treatment and management.</h2>
+        </div>
+        <div className="box2">
+          <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faMosquito} />
+          <h1>Vector Borne</h1>
+          <h2>Our Vector Borne IVD kits provide accurate detection of diseases transmitted by vectors such as mosquitoes and ticks, aiding in the early diagnosis and effective treatment of conditions like malaria and dengue.</h2>
+        </div>
+        <div className="box3">
+          <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faBaby} />
+          <h1>Fertility</h1>
+          <h2>Our Pregnancy IVD kits offer reliable and rapid results, helping individuals and healthcare professionals make informed decisions during the crucial stages of pregnancy.</h2>
+        </div>
+        <div className="box4">
+          <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faLungs} />
+          <h1>Respiratory</h1>
+          <h2>Our Respiratory IVD kits, including COVID-19 test kits, deliver accurate diagnostics for a range of respiratory conditions, enabling prompt and effective medical intervention.</h2>
+        </div>
       </div>
-      <div className="box2">
-        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faMosquito} />
-        <h1>Vector Borne</h1>
-        <h2>Our Vector Borne IVD kits provide accurate detection of diseases transmitted by vectors such as mosquitoes and ticks, aiding in the early diagnosis and effective treatment of conditions like malaria and dengue.</h2>
-      </div>
-      <div className="box3">
-        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faBaby} />
-        <h1>Fertility</h1>
-        <h2>Our Pregnancy IVD kits offer reliable and rapid results, helping individuals and healthcare professionals make informed decisions during the crucial stages of pregnancy.</h2>
-      </div>
-      <div className="box4">
-        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faLungs} />
-        <h1>Respiratory</h1>
-        <h2>Our Respiratory IVD kits, including COVID-19 test kits, deliver accurate diagnostics for a range of respiratory conditions, enabling prompt and effective medical intervention.</h2>
-      </div>
-    </div>
     </div>
   )
 }
@@ -144,34 +144,43 @@ function Footer() {
             <h1>Our Products</h1>
             <div className="category1">
               <h2>Vector Borne Disease</h2>
-            <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
             </div>
             <div className="category2">
               <h2>Blood Borne Disease</h2>
-            <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
             </div>
             <div className="category3">
               <h2>Hepatitis</h2>
-            <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
             </div>
             <div className="category4">
               <h2>Cardiac Master</h2>
-            <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
             </div>
-
-            <div className="footerboxsplit">
-              {}
+            <div className="category5">
+              <h2>Respiratory</h2>
+              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+            </div>
+            <div className="category6">
+              <h2>Gastric Disease</h2>
+              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+            </div>
+            <div className="category7">
+              <h2>Fertility</h2>
+              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
             </div>
           </div>
-           <div className="vl"></div>
+          <div className="vl"></div>
           <div className="footerbox3">
             <h1>Contact Us</h1>
-            <h2>WhatsApp : +91 70183 09056</h2>
-            <h2>Call : +91 70183 09056 <br /></h2>
-            <h2>Availability : 10am-6pm from Monday to Saturday</h2>
-            <h2>Email : info@diagnocureindia.com <br /></h2>
-            <h2>Address : Diagnocure India,<br />
-              2, F/F, Electronics Complex, Chambaghat, Near Exicom Tele Systems Limited , Solan - 173213, Himachal Pradesh, India</h2>
+            <h2><b>WhatsApp</b> : +91 9615096156</h2>
+            <h2><b>Call</b> : +91 9615096156 <br /></h2>
+            <h2><b>Availability</b> : 10am-6pm from Monday to Saturday</h2>
+            <h2><b>Email</b> : info@diagnocureindia.com <br /></h2>
+            <h2><b>Address</b> : Diagnocure India,<br />
+            #2, F/F, Electronics Complex, Chambaghat
+            Distt. Solan H.P. - 173213</h2>
           </div>
         </div>
       </div>
@@ -194,12 +203,12 @@ export default function Myapp() {
   return (
     <>
       <div>
-        <Header isMobile={isMobile}/>
+        <Header isMobile={isMobile} />
       </div>
       <div className="headerblock">
       </div>
       <div className="banner">
-        <img src={isMobile?banner2:banner1} style={{ width: "100%" }}></img>
+        <img src={isMobile ? banner2 : banner1} style={{ width: "100%" }}></img>
       </div>
       <div style={{ height: "45vh" }}></div>
       <Bannerwrap />
