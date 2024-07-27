@@ -1,0 +1,42 @@
+.scroller-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .scroller-image {
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .left {
+    left: 10px;
+  }
+  
+  .right {
+    right: 10px;
+  }
+  

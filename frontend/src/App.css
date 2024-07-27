@@ -1,0 +1,208 @@
+body {
+  height: 200vh;
+  /* background-color: rgb(236, 236, 236); */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-y: scroll;
+}
+
+.headerblock {
+  z-index: 0;
+  height: 10vh;
+  
+}
+
+
+
+.header, .scrollheader {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  z-index: 1;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.header {
+  height: 10vh;
+  background-color: rgb(59,105,166);
+
+}
+
+.scrollheader {
+  height: 5vh;
+  background-color: rgb(44, 44, 44);
+}
+
+.header h1, .scrollheader h1 {
+  color: white;
+  font-family:poppins;
+  font-size: 2rem;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: auto;
+  margin-left: 60%;
+}
+.banner{
+  width: 100vw;
+  height: 20vh;
+ 
+}
+
+.desktopdropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  /* border: black 1px solid; */
+ 
+}
+.desktopdropdown h2 {
+  color: white;
+  font-size: small;
+  margin: 0 10px;
+}
+
+h2:hover {
+  color: black;
+}
+
+.textcontainer h1 {
+  font: Poppins;
+  /* margin: 5px; */
+  font-size: larger;
+  
+  
+}
+
+.textcontainer h2{
+  font: Poppins;
+  color: rgb(79, 79, 79);
+  /* margin : 5px; */
+  font-size: medium;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.textcontainer {
+  margin: 6vw;
+  /* border: black 0.5px solid; */
+  border-radius: 8px;
+}
+
+
+.wrap {
+  display: flex;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch; /* Ensures boxes are the same height */
+  text-align: center;
+  height: fit-content;
+}
+
+.wrap h1 {
+  font-size: x-large;
+}
+
+.wrap h2 {
+  font-weight: 400;
+  font-size: medium;
+  margin: 5px;
+  color: rgb(79, 79, 79);
+  padding: 0 10px; /* Add padding for better text spacing */
+}
+
+.box1, .box2, .box3, .box4 {
+  flex: 1; /* Allows boxes to be evenly spaced */
+  border-right: black 0.5px solid;
+  padding: 20px; /* Add padding for better text spacing */
+}
+
+.box1 h1, .box2 h1, .box3 h1, .box4 h1 {
+  color: rgb(59, 105, 166);
+}
+
+.box1:last-child, .box2:last-child, .box3:last-child, .box4:last-child {
+  border-right: none; /* Remove border for the last box */
+}
+.footer {
+  width: 100vw;
+  background-color: rgb(59, 105, 166); /* Color scheme */
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Horizontal layout */
+  justify-content: center; /* Center content */
+  align-items: stretch; /* Equal height for all boxes */
+  padding: 20px 0; /* Padding for top and bottom */
+  border-top: 1px solid #333; /* Top border */
+}
+
+.footerwrapper {
+  display: flex; /* Flexbox layout */
+  width: 90%; /* Wrapper width */
+  justify-content: space-between; /* Space between boxes */
+  gap: 20px; /* Gap between boxes */
+}
+
+.footerbox1, .footerbox2, .footerbox3 {
+  flex: 1; /* Equal width for all boxes */
+  margin: 0 10px; /* Margin between boxes */
+  text-align: left;
+}
+
+.footerbox2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerboxsplit {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Gap between left and right boxes */
+}
+
+.footerboxsplit .boxleft,
+.footerboxsplit .boxright {
+  flex: 1; /* Equal width for both boxes */
+}
+
+.footer h1 {
+  font-size: 1.5rem; /* Header font size */
+  color: white; /* Header font color */
+  margin-bottom: 10px; /* Space below header */
+}
+
+.footer h2 {
+  font-weight: 400; /* Body font weight */
+  font-size: 1rem; /* Body font size */
+  color: white; /* Body font color */
+  margin: 5px 0; /* Margin for body text */
+}
+
+.copyright {
+  height: 10vh;
+  background-color: rgb(59, 105, 166);
+  border-top: 0.3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.copyright h2 {
+  color: white;
+  font-weight: 300;
+  font-size: small;
+}
+
+
