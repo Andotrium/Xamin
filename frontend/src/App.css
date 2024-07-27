@@ -283,5 +283,23 @@ h2:hover {
   font-weight: 300;
   font-size: small;
 }
+.vl{
+  border-left: white 0.3px solid;
+  height: 300px;
+}
+.category1 ,.category2 ,.category3 ,.category4 {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: white 0.3px solid;
+  justify-content: space-between;
+  align-items: center;
+}
+.category1 h2,.category2 h2,.category3 h2,.category4 h2{
+  color: white;
+  font-size: large;
+  font-weight: 600;
+
+}
 
 

@@ -5,7 +5,7 @@ import banner1 from "./media/desktopbanner.jpg"
 import banner2 from "./media/mobilebanner.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faDroplet, faMosquito, faBaby, faLungs } from "@fortawesome/free-solid-svg-icons";
+import { faDroplet, faMosquito, faBaby, faLungs,faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 
@@ -139,43 +139,31 @@ function Footer() {
             <h2>Downloads</h2>
             <h2>Updates</h2>
           </div>
+          <div className="vl"></div>
           <div className="footerbox2">
             <h1>Our Products</h1>
+            <div className="category1">
+              <h2>Vector Borne Disease</h2>
+            <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+            </div>
+            <div className="category2">
+              <h2>Blood Borne Disease</h2>
+            <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+            </div>
+            <div className="category3">
+              <h2>Hepatitis</h2>
+            <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+            </div>
+            <div className="category4">
+              <h2>Cardiac Master</h2>
+            <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
+            </div>
+
             <div className="footerboxsplit">
-              <div className="boxleft">
-                <h1>Respiratory </h1>
-                <h2>Covid-19 Ag</h2>
-                <h2>Covid -19 IgG Ab</h2>
-                <h1>Vector Borne Disease</h1>
-                <h2>Dengue Duo</h2>
-                <h2>Dengue Ns1 Ag</h2>
-                <h2>Dengue IgG/IgM Ab</h2>
-                <h2>Chikungunya IgG/IgM</h2>
-                <h2>Leptospira IgG/IgM </h2>
-                <h2>Malaria Pf Ag</h2>
-                <h2>Malaria Pf/Pv Ag</h2>
-                <h2>Malaria Pf/Pan Ag</h2>
-                <h2>Typhoid IgG/IgM Ab</h2>
-              </div>
-              <div className="boxright">
-                <h1>Blood Borne Disease </h1>
-                <h2>HIV 1/2 Triline Ab</h2>
-                <h2>Syphilis Ab </h2>
-                <h2>HIV/Syphilis Combo </h2>
-
-                <h1>Hepatitis </h1>
-                <h2>HBsAg</h2>
-                <h2>HCV Ab</h2>
-
-
-                <h1>Gastrointestinal Disease </h1>
-                <h2>H.Pylori Ab</h2>
-                <h1>Cardiac Marker </h1>
-                <h2>Troponin I </h2>
-
-              </div>
+              {}
             </div>
           </div>
+           <div className="vl"></div>
           <div className="footerbox3">
             <h1>Contact Us</h1>
             <h2>WhatsApp : +91 70183 09056</h2>
