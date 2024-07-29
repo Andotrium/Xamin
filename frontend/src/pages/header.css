@@ -1,0 +1,78 @@
+.header,
+.scrollheader {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    z-index: 1;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.header {
+    height: 10vh;
+    background-color: rgb(59, 105, 166);
+
+}
+
+.scrollheader {
+    height: 5vh;
+    background-color: rgb(44, 44, 44);
+}
+
+.header h1,
+.scrollheader h1 {
+    color: white;
+    font-family: poppins;
+    font-size: 2rem;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    margin-left: 60%;
+}
+
+.desktopdropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.desktopdropdown h2 {
+    color: white;
+    font-size: small;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.desktopdropdown h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.desktopdropdown h2:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.desktopdropdown h2:hover::after {
+    transform: scaleX(1);
+}

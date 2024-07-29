@@ -9,71 +9,15 @@ body {
 .headerblock {
   z-index: 0;
   height: 10vh;
-  
 }
 
-
-
-.header, .scrollheader {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  position: fixed;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
-  z-index: 1;
-  padding: 0 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-}
-
-.header {
-  height: 10vh;
-  background-color: rgb(59,105,166);
-
-}
-
-.scrollheader {
-  height: 5vh;
-  background-color: rgb(44, 44, 44);
-}
-
-.header h1, .scrollheader h1 {
-  color: white;
-  font-family:poppins;
-  font-size: 2rem;
-}
-
-.dropdown {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: auto;
-  margin-left: 60%;
-}
 .banner{
   width: 100vw;
   height: 20vh;
  
 }
 
-.desktopdropdown {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 80%;
-  /* border: black 1px solid; */
- 
-}
-.desktopdropdown h2 {
-  color: white;
-  font-size: small;
-  margin: 0 10px;
-}
 
-h2:hover {
-  color: black;
-}
 
 .textcontainer h1 {
   font: Poppins;
@@ -315,91 +259,3 @@ h2:hover {
   font-weight: 600;
 
 }
-/*nav bar*/
-/* nav {
-  position: relative;
-  display: block;
-  background-color: rgb(59, 105, 166);
-  padding: 10px;
-  border-radius: 40px;
-  transform: scale(1.8);
-  overflow: hidden;
-}
-
-nav a {
-  position: relative;
-  text-decoration: none;
-  color: #53588b;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 12px;
-  line-height: 1;
-  text-align: center;
-  display: inline-block;
-  width: 100px;
-  padding: 10px;
-  box-sizing: border-box;
-  z-index: 2;
-}
-
-nav a b {
-  position: relative;
-  top: 40px;
-  transition: 0.3s ease top;
-}
-
-nav a i {
-  position: relative;
-  left: 25%;
-  transition: 0.3s ease left;
-}
-
-nav span {
-  position: absolute;
-  width: 100px;
-  background-color: #e5eeff;
-  top: 10px;
-  bottom: 10px;
-  left: 10px;
-  border-radius: 50px;
-  z-index: 1;
-  transition: 0.3s ease left;
-}
-
-nav a:hover b {
-  top: 0;
-}
-
-nav a:hover i {
-  left: 0;
-}
-
-nav a:nth-child(1):hover ~ span {
-  left: 10px;
-}
-
-nav a:nth-child(2):hover ~ span {
-  left: 114px;
-}
-
-nav a:nth-child(3):hover ~ span {
-  left: 218px;
-}
-
-#ytd-url {
-  display: block;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  padding: 10px 14px;
-  margin: 20px;
-  color: #fff;
-  font-family: Arial;
-  font-size: 14px;
-  text-decoration: none;
-  background-color: #53588b;
-  border-radius: 4px;
-  box-shadow: 0 10px 20px -5px rgba(83, 88, 139, 0.3);
-  z-index: 125;
-} */
-
-

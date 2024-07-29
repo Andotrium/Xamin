@@ -5,46 +5,14 @@ import banner1 from "./media/desktopbanner.jpg"
 import banner2 from "./media/mobilebanner.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faDroplet, faMosquito, faBaby, faLungs, faPlus, faWhatsapp} from "@fortawesome/free-solid-svg-icons";
+import { faDroplet, faMosquito, faBaby, faLungs, faPlus, faWhatsapp } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Navabout from "./pages/aboutus";
 
 
-function Header({ isMobile }) {
-  const [scroll, setscroll] = useState(false);
 
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener("scroll", () => {
-        setscroll(window.scrollY > 200);
-      });
-    }
-  }, []);
-
-  return (
-    <div className={scroll ? "scrollheader" : "header"}>
-      <h1>Xamin</h1>
-      {isMobile ? <MobileDropdown /> : <DesktopDropdown />}
-
-    </div>
-  );
-}
-
-function DesktopDropdown() {
-  return (
-
-    <div className="desktopdropdown">
-    <h2>About Us</h2>
-    <h2>Our Products</h2>
-    <h2>Contact Us</h2>
-    <h2>Downloads</h2>
-    <h2>Updates</h2>
-    <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faMagnifyingGlass} />
-  </div>
-
-  );
-}
 
 function MobileDropdown() {
   return (
@@ -179,8 +147,8 @@ function Footer() {
             <h2><b>Availability</b> : 10am-6pm from Monday to Saturday</h2>
             <h2><b>Email</b> : info@diagnocureindia.com <br /></h2>
             <h2><b>Address</b> : Diagnocure India,<br />
-            #2, F/F, Electronics Complex, Chambaghat
-            Distt. Solan H.P. - 173213</h2>
+              #2, F/F, Electronics Complex, Chambaghat
+              Distt. Solan H.P. - 173213</h2>
           </div>
         </div>
       </div>
@@ -202,9 +170,6 @@ export default function Myapp() {
   }, []);
   return (
     <>
-      <div>
-        <Header isMobile={isMobile} />
-      </div>
       <div className="headerblock">
       </div>
       <div className="banner">
