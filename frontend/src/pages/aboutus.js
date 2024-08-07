@@ -6,11 +6,12 @@ export default function About(){
     return(
     <>
       <div className="headerblock"></div>
-      <div className="textbox">
-      <h1 style={{ color: "rgb(59, 105, 166)", fontSize: "xx-large", textAlign: "center", marginTop: "35px" }}> About Us </h1>
-        <h1>Diagnocure (India): Revolutionizing Healthcare with Cutting-Edge Diagnostic Solutions</h1>
+      <div className="textboxoutline" style={{}}>
+        <h1 style={{ color: "rgb(59, 105, 166)", fontSize: "xxx-large", textAlign: "center", marginTop: "35px" }}>Diagnocure (India): Revolutionizing Healthcare <br />with Cutting-Edge Diagnostic Solutions</h1>
         <h2>Diagnocure (India) is a pioneering healthcare initiative founded by renowned philanthropist Mr. Sunit Kumar. With a vision to serve mankind with the best in healthcare, Mr. Kumar and his team have leveraged their expertise in various industries, including manufacturing testing equipment, real estate, steel, and bi-metal products, to establish Diagnocure as a global leader in healthcare solutions. Since launching its first testing kit in 2015, Diagnocure has gained a stellar reputation for providing value-based, reliable, and innovative products in the healthcare market.</h2>
-        <h1 id="top">About Us: Xamin by Diagnocure India </h1>
+      </div>
+      <div className="textbox">
+        <h1 id="top">Xamin by Diagnocure India </h1>
 
 <h2><b>Welcome to Xamin by Diagnocure India </b></h2>
 
@@ -40,7 +41,8 @@ While we are proud of our Indian heritage, our vision extends beyond borders. Xa
 <b>Join Us in Shaping the Future of Diagnostics </b>
 
 We invite you to explore our range of innovative IVD kits and join us in our mission to transform healthcare through excellence in diagnostics. Together, we can make a meaningful difference in the lives of patients and communities around the world. </h2>
-
+</div>
+<div className="textboxoutline">
 <h1> Why Choose Diagnocure and Xamin?</h1>
 
 <h2><b>- Trusted Leader in Healthcare:</b>Since 2015, Diagnocure has been a trusted name in healthcare, known for innovative and reliable diagnostics.
@@ -54,7 +56,8 @@ We invite you to explore our range of innovative IVD kits and join us in our mis
 <b>- Innovative Research and Development:</b> Our R&D team is dedicated to staying ahead of industry trends and pioneering new advancements in diagnostics.
 </h2>
 <h1><b>Choose Diagnocure and Xamin for your diagnostic needs and experience the difference that quality, innovation, and dedication can make in healthcare. Join us in shaping the future of diagnostics and improving patient outcomes worldwide.</b></h1>
-      </div>
+      
+  </div>
 
     </>
     )

@@ -10,6 +10,7 @@ import Header from './pages/Header';
 import Contact from './pages/contact';
 import Downloadpage from './pages/downloads';
 import Updatespage from './pages/updates';
+import Footer from './pages/footer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,8 +26,9 @@ root.render(
       <Route path='/downloads' element={<Downloadpage />} />
       <Route path='/updates' element={<Updatespage />} />
     </Routes>
-
+    <Footer />
     </BrowserRouter>
+    
   </React.StrictMode>
 );
 

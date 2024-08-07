@@ -180,10 +180,10 @@ export default function Myapp() {
       <div style={{ height: "0px" }}></div>
 
       <AboutUs />
-      <Footer />
-      <div className="copyright">
+      {/* <Footer /> */}
+      {/* <div className="copyright">
         <h2>© 2024, Diagnocure India. All Rights Reserved. Developed by <b>Andotrium</b></h2>
-      </div>
+      </div> */}
 
     </>
   );

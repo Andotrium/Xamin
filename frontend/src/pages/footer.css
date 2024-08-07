@@ -1,0 +1,157 @@
+.footer {
+    width: 100vw;
+    background-color: rgb(59, 105, 166); /* Color scheme */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content */
+    padding: 20px 0; /* Padding for top and bottom */
+    border-top: 1px solid #333; /* Top border */
+  }
+  
+  .footerwrapper {
+    display: flex; /* Flexbox layout */
+    width: 90%; /* Wrapper width */
+    justify-content: space-between; /* Space between boxes */
+    gap: 20px; /* Gap between boxes */
+  }
+  
+  .footerbox1, .footerbox2, .footerbox3 {
+    flex: 1; /* Equal width for all boxes */
+    margin: 0 10px; /* Margin between boxes */
+    text-align: left;
+  }
+  
+  .footerbox2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  .footerboxsplit {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; /* Gap between left and right boxes */
+  }
+  
+  .footerboxsplit .boxleft,
+  .footerboxsplit .boxright {
+    flex: 1; /* Equal width for both boxes */
+  }
+  
+  /* Styles for header elements within footer boxes */
+  .footerbox1 h1, .footerbox3 h1 {
+    font-size: 1.5rem; 
+    color: white; 
+    margin-bottom: 10px; 
+  }
+  
+  /* Styles for text elements within footer boxes */
+  .footerbox1 h2, .footerbox3 h2 {
+    font-weight: 400; 
+    font-size: 1rem; 
+    color: white; 
+    margin: 5px 0; 
+  }
+  
+  /* Specific styles for box1 and box3 headers */
+  .footerbox1 h1, .footerbox3 h1 {
+    font-size: 1.5rem; 
+    color: white; 
+    margin-bottom: 10px; 
+  }
+  
+  /* Specific styles for box1 and box3 text */
+  .footerbox1 h2, .footerbox3 h2 {
+    font-weight: 400; 
+    font-size: 1rem; 
+    color: white; 
+    margin: 5px 0; 
+  }
+  
+  /* Specific styles for box2 headers */
+  .footerbox2 h1 {
+    color: white;
+  }
+  
+  /* Specific styles for box2 text */
+  .footerboxsplit h2 {
+    font-weight: 400; 
+    font-size: 1rem; 
+    color: white; 
+    margin: 5px 0; 
+  }
+  
+  /* Margin adjustments for box2 headers */
+  .footerboxsplit h1 {
+    font-size: 1.5rem; 
+    color: white; 
+    margin-bottom: 10px; 
+  }
+  
+  /* Additional styles for a copyright section */
+  .copyright {
+    height: 10vh;
+    background-color: rgb(59, 105, 166);
+    border-top: white 0.3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+.copyright h2 {
+    color: white;
+    font-weight: 300;
+    font-size: small;
+}
+  
+   
+  
+.copyright {
+    height: 10vh;
+    background-color: rgb(59, 105, 166);
+    border-top: 0.3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+.copyright h2 {
+    color: white;
+    font-weight: 300;
+    font-size: small;
+ }
+.vl{
+    border-left: white 0.3px solid;
+    height: 95%;
+  }
+
+
+.category1 {
+  background-color: transparent;
+  border-color: transparent;
+
+}
+h3{
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+}
+/* .category1 ,.category2 ,.category3 ,.category4,.category5,.category6,.category7 {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    border-bottom: white 0.3px solid;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.category7:last-child{
+    border-bottom: rgba(255, 255, 255, 0) 0.3px solid;
+  }
+.category1 h2,.category2 h2,.category3 h2,.category4 h2,.category5 h2,.category6 h2,.category7 h2{
+    color: white;
+    font-size: large;
+    font-weight: 600;
+  
+  } */
+  

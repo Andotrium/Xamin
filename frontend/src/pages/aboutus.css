@@ -3,7 +3,8 @@
   height: 10vh;
 }
 
-.textbox h1 {
+
+.textbox h1, .textboxoutline h1 {
   font: Poppins;
   margin-left: 30px;
   margin-right: 30px;
@@ -12,7 +13,7 @@
 
 }
 
-.textbox h2 {
+.textbox h2, .textboxoutline h2 {
   font: Poppins;
   color: rgb(79, 79, 79);
   margin-left: 30px;
@@ -31,6 +32,15 @@
   background: #f2f2f2;
   box-shadow: 20px 20px 60px #cecece,
     -20px -20px 60px #ffffff;
+
+}
+.textboxoutline {
+  margin: 6vw;
+  border: black 0.5px solid;
+  border-radius: 30px;
+  border: rgba(0, 0, 0, 0) 0.5px solid;
+  background: #f2f2f2;
+
 
 }
 
