@@ -49,13 +49,6 @@ function DesktopDropdown() {
   );
 }
 
-function MobileDropdown() {
-  return (
-    <div className="dropdown">
-      <FontAwesomeIcon style={{ color: "black", fontSize: '1.7em' }} icon={faBars} />
-    </div>
-  );
-}
 
 
 export default function Header({ isMobile }) {
@@ -77,7 +70,7 @@ export default function Header({ isMobile }) {
         <h1>Xamin</h1>
             </Link>
         </nav>
-        {isMobile ? <MobileDropdown /> : <DesktopDropdown />}
+        <DesktopDropdown />
   
       </div>
     );

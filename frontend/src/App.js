@@ -11,17 +11,6 @@ import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Navabout from "./pages/aboutus";
 
-
-
-
-function MobileDropdown() {
-  return (
-    <div className="dropdown">
-      <FontAwesomeIcon style={{ color: "black", fontSize: '1.7em' }} icon={faBars} />
-    </div>
-  );
-}
-
 function AboutUs() {
 
 
@@ -64,8 +53,22 @@ function AboutUs() {
     </>
   )
 }
-
-function Bannerwrap({ isMobile }) {
+function MobileBannerwrap() {
+  return (
+    <>
+      <div className="outerwrap">
+        <div className="wrap">
+          <div className="box1">
+            <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faDroplet} />
+            <h1>Blood Borne</h1>
+            <h2>Our Blood Borne IVD kits provide precise detection of blood-borne pathogens, ensuring timely and accurate diagnoses for effective treatment and management.</h2>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+function DesktopBannerwrap() {
   return (
     <div className="outerwrap">
       <div className="wrap">
@@ -94,66 +97,15 @@ function Bannerwrap({ isMobile }) {
   )
 }
 
-function Footer() {
+function Bannerwrap({ isMobile }) {
   return (
     <>
-      <div className="footer">
-        <div className="footerwrapper">
-          <div className="footerbox1">
-            <h1>Useful Links</h1>
-            <h2>About Us</h2>
-            <h2> Our Products</h2>
-            <h2>Contact Us</h2>
-            <h2>Downloads</h2>
-            <h2>Updates</h2>
-          </div>
-          <div className="vl"></div>
-          <div className="footerbox2">
-            <h1>Our Products</h1>
-            <div className="category1">
-              <h2>Vector Borne Disease</h2>
-              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
-            </div>
-            <div className="category2">
-              <h2>Blood Borne Disease</h2>
-              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
-            </div>
-            <div className="category3">
-              <h2>Hepatitis</h2>
-              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
-            </div>
-            <div className="category4">
-              <h2>Cardiac Master</h2>
-              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
-            </div>
-            <div className="category5">
-              <h2>Respiratory</h2>
-              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
-            </div>
-            <div className="category6">
-              <h2>Gastric Disease</h2>
-              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
-            </div>
-            <div className="category7">
-              <h2>Fertility</h2>
-              <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em' }} icon={faPlus} />
-            </div>
-          </div>
-          <div className="vl"></div>
-          <div className="footerbox3">
-            <h1>Contact Us</h1>
-            <h2><b>WhatsApp</b> : +91 9615096156</h2>
-            <h2><b>Call</b> : +91 9615096156 <br /></h2>
-            <h2><b>Availability</b> : 10am-6pm from Monday to Saturday</h2>
-            <h2><b>Email</b> : info@diagnocureindia.com <br /></h2>
-            <h2><b>Address</b> : Diagnocure India,<br />
-              #2, F/F, Electronics Complex, Chambaghat
-              Distt. Solan H.P. - 173213</h2>
-          </div>
-        </div>
-      </div>
+      {isMobile ?
+        <MobileBannerwrap /> :
+        <DesktopBannerwrap />
+      }
     </>
-  );
+  )
 }
 
 
@@ -175,15 +127,10 @@ export default function Myapp() {
       <div className="banner">
         <img src={isMobile ? banner2 : banner1} style={{ width: "100%" }}></img>
       </div>
-      <div style={{ height: "45vh" }}></div>
-      <Bannerwrap />
+      <div style={isMobile?{height:"550px"}:{ height: "45vh" }}></div>
+      <Bannerwrap isMobile={isMobile} />
       <div style={{ height: "0px" }}></div>
-
       <AboutUs />
-      {/* <Footer /> */}
-      {/* <div className="copyright">
-        <h2>© 2024, Diagnocure India. All Rights Reserved. Developed by <b>Andotrium</b></h2>
-      </div> */}
 
     </>
   );

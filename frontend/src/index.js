@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -11,13 +11,39 @@ import Contact from './pages/contact';
 import Downloadpage from './pages/downloads';
 import Updatespage from './pages/updates';
 import Footer from './pages/footer';
+import MobileHeader from './pages/mobile/mobileheader';
+import Mobilefooter from './pages/mobile/mobilefooter';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+function Viewport(props){
+  const [width,setwidth] = useState(window.innerWidth);
+  function handlewindowresize(){
+    setwidth(window.innerWidth);
+  }
+  useEffect(()=>{
+    window.addEventListener('resize', handlewindowresize);
+  },[]
+  )
+  const isMobile = width <= 768;
+  return(
+    <>
+    {isMobile?
+    <MobileHeader />
+    :
+    <Header />}
+    {props.children}
+    {isMobile?
+    <Mobilefooter />:
+    <Footer />}
+    </>
+  )
+}
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Header />
+    <Viewport>
     <Routes>
       <Route index element={<App />} />
       <Route path='/about' element={<Navabout />} />
@@ -26,7 +52,7 @@ root.render(
       <Route path='/downloads' element={<Downloadpage />} />
       <Route path='/updates' element={<Updatespage />} />
     </Routes>
-    <Footer />
+    </Viewport>
     </BrowserRouter>
     
   </React.StrictMode>

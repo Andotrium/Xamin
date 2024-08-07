@@ -59,9 +59,9 @@ function Dropdown() {
           </AccordionButton>
           <AccordionPanel>
             <h3>
-            HIV 1/2 Triline Ab <br />
-Syphilis Ab <br />
-HIV/Syphilis Combo <br />
+              HIV 1/2 Triline Ab <br />
+              Syphilis Ab <br />
+              HIV/Syphilis Combo <br />
             </h3>
           </AccordionPanel>
         </AccordionItem>
@@ -74,9 +74,9 @@ HIV/Syphilis Combo <br />
             <AccordionIcon style={{ color: "white" }} />
           </AccordionButton>
           <AccordionPanel>
-            <h3> 
-            HBsAg <br />
-            HCV Ab
+            <h3>
+              HBsAg <br />
+              HCV Ab
             </h3>
           </AccordionPanel>
         </AccordionItem>
@@ -88,7 +88,7 @@ HIV/Syphilis Combo <br />
           </AccordionButton>
           <AccordionPanel>
             <h3>
-            H.Pylori Ab
+              H.Pylori Ab
             </h3>
           </AccordionPanel>
         </AccordionItem>
@@ -100,7 +100,7 @@ HIV/Syphilis Combo <br />
           </AccordionButton>
           <AccordionPanel>
             <h3>
-            Troponin I 
+              Troponin I
             </h3>
           </AccordionPanel>
         </AccordionItem>
@@ -112,10 +112,10 @@ HIV/Syphilis Combo <br />
           </AccordionButton>
           <AccordionPanel>
             <h3>
-            One step Urine Pregnancy Test (Mini) <br />
- One step Urine Pregnancy Test (Maxi) <br />
-One step Urine/Serum Pregnancy Test Device <br />
-LH Ovulation <br />
+              One step Urine Pregnancy Test (Mini) <br />
+              One step Urine Pregnancy Test (Maxi) <br />
+              One step Urine/Serum Pregnancy Test Device <br />
+              LH Ovulation <br />
             </h3>
           </AccordionPanel>
         </AccordionItem>
@@ -125,7 +125,7 @@ LH Ovulation <br />
 }
 
 export default function Footer() {
-  const [isopen, setisopen] = useState(false)
+
   return (
     <>
       <div className="footer">
@@ -163,37 +163,6 @@ export default function Footer() {
             <h1>Our Products</h1>
             <Dropdown />
           </div>
-
-
-          {/* <div className="category1">
-                <h2>Vector Borne Disease</h2>
-                <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em', cursor:"pointer" }} icon={faPlus} />
-              </div>
-              <div className="category2">
-                <h2>Blood Borne Disease</h2>
-                <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em', cursor:"pointer" }} icon={faPlus} />
-              </div>
-              <div className="category3">
-                <h2>Hepatitis</h2>
-                <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em', cursor:"pointer" }} icon={faPlus} />
-              </div>
-              <div className="category4">
-                <h2>Cardiac Master</h2>
-                <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em', cursor:"pointer" }} icon={faPlus} />
-              </div>
-              <div className="category5">
-                <h2>Respiratory</h2>
-                <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em', cursor:"pointer" }} icon={faPlus} />
-              </div>
-              <div className="category6">
-                <h2>Gastric Disease</h2>
-                <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em', cursor:"pointer" }} icon={faPlus} />
-              </div>
-              <div className="category7">
-                <h2>Fertility</h2>
-                <FontAwesomeIcon style={{ color: "white", fontSize: '1.3em', cursor:"pointer" }} icon={faPlus} />
-              </div>
-            </div> */}
           <div className="vl"></div>
           <div className="footerbox3">
             <h1>Contact Us</h1>

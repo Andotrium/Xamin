@@ -1,0 +1,21 @@
+
+.mobilefooterbox{
+    width: 100vw;
+    background-color: rgb(59, 105, 166);
+}
+
+.copyright {
+    height: 10vh;
+    background-color: rgb(59, 105, 166);
+    border-top: 0.3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+.copyright h2 {
+    color: white;
+    font-weight: 300;
+    font-size: small;
+ }

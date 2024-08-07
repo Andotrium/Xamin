@@ -1,0 +1,29 @@
+.mobileheader,
+.mobilescrollheader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobileheader {
+    height: 10vh;
+    background-color: rgb(59, 105, 166);
+
+}
+
+.mobilescrollheader {
+    height: 5vh;
+    background-color: rgba(44, 44, 44, 0.613);
+}
+h1 {
+    color: white;
+    margin: 20px;
+}
+
+
+
