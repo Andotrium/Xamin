@@ -1,3 +1,28 @@
+.category2 {
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.category2 h2 {
+    color: white;
+}
+
+.subcategory2 {
+    background-color: transparent;
+    border-color: transparent;
+    justify-content: space-between;
+}
+h4 {
+    color: white;
+    font-size: smaller;
+    font-weight: 400;
+    text-align: left;
+    padding: 20px;
+}
+
 
 .mobilefooterbox{
     width: 100vw;
