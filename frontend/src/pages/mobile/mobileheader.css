@@ -5,15 +5,16 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
-    z-index: 1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.5s ease;
+    z-index: 1000;
+    /* padding: 0 15px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .mobileheader {
     height: 10vh;
     background-color: rgb(59, 105, 166);
-
+    
 }
 
 .mobilescrollheader {
@@ -24,6 +25,40 @@ h1 {
     color: white;
     margin: 20px;
 }
+.dropdown {
+background-color: rgb(30,30,30);
+width: 100%;
+height: 100vh;
+z-index: 1000;
+margin-left: 0;
+display: flex;
+justify-content: space-between;
+align-items: start;
+transition: background-color 0.5s ease, height 0.5s ease;
+}
+
+#menuhead{
+    height: 20vh;
+}
+
+#menu,#bars{
+    padding: 15px;
+}
+
+#menu h2{
+    color: white;
+    font-size: xx-large;
+    font-weight: 600;
+}
+#rightblock{
+    width: 15vw;
+}
+
+
+
+
+
+
 
 
 
