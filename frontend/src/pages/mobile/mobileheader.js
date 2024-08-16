@@ -3,8 +3,7 @@ import "./mobileheader.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
-import { Accordion, AccordionItem, AccordionButton } from "@chakra-ui/react"
-import { click } from "@testing-library/user-event/dist/click"
+
 import { useLocation } from "react-router-dom"
 
 export default function MobileHeader() {
@@ -20,12 +19,16 @@ export default function MobileHeader() {
     const [dropdown, setdropdown] = useState(false)
     const location = useLocation();
     useEffect(()=>{
-        setdropdown(false)
+        setdropdown(false);
     },[location])
 
     const clicked = () => {
-        setdropdown(!dropdown)
+        setdropdown(!dropdown);
+        
     }
+
+    dropdown?document.body.classList.add('no-scroll'):document.body.classList.remove('no-scroll')
+   
 
     return (
         <div className={dropdown ? "dropdown" : (scroll ? "mobilescrollheader" : "mobileheader")}>
@@ -66,7 +69,8 @@ export default function MobileHeader() {
                     ""
             }
             <div id="bars">
-                <FontAwesomeIcon onClick={clicked} style={{ color: "white", fontSize: '1.3em', margin: "20px" }} icon={dropdown ? faX : faBars} />
+                {!dropdown?<FontAwesomeIcon onClick={clicked} style={{color: 'white',fontSize: '1.3em', margin: "20px" }} icon={faBars} />:
+                <FontAwesomeIcon onClick={clicked} style={{color:'rgb(59, 105, 166)', fontSize:'1.3em', margin:"20px"}} icon={faX} /> }
             </div>
         </div>
     )
