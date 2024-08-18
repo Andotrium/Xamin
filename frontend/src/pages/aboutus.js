@@ -1,17 +1,29 @@
 import "./aboutus.css"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import ComingSoon from "./coming"
 
+
 export default function About(){
+  const [width,setwidth] = useState(window.innerWidth);
+  function handlewindowresize(){
+    setwidth(window.innerWidth);
+  }
+  useEffect(()=>{
+    window.addEventListener('resize', handlewindowresize);
+  },[]
+  )
+  const isMobile = width <= 768;
     return(
     <>
       <div className="headerblock"></div>
       <div className="textboxoutline" style={{}}>
-        <h1 style={{ color: "rgb(59, 105, 166)", fontSize: "xxx-large", textAlign: "center", marginTop: "35px" }}>Diagnocure (India): Revolutionizing Healthcare <br />with Cutting-Edge Diagnostic Solutions</h1>
+        {isMobile?
+        <h1 style={{color:"rgb(59,105,166)", fontSize:"xx-large", textAlign:"center", marginTop:"35px"}}>Diagnocure(India) <br /></h1>:
+        <h1 style={{ color: "rgb(59, 105, 166)", fontSize: "xxx-large", textAlign: "center", marginTop: "35px" }}>Diagnocure (India): Revolutionizing Healthcare <br />with Cutting-Edge Diagnostic Solutions</h1>}
         <h2>Diagnocure (India) is a pioneering healthcare initiative founded by renowned philanthropist Mr. Sunit Kumar. With a vision to serve mankind with the best in healthcare, Mr. Kumar and his team have leveraged their expertise in various industries, including manufacturing testing equipment, real estate, steel, and bi-metal products, to establish Diagnocure as a global leader in healthcare solutions. Since launching its first testing kit in 2015, Diagnocure has gained a stellar reputation for providing value-based, reliable, and innovative products in the healthcare market.</h2>
       </div>
       <div className="textbox">
-        <h1 id="top">Xamin by Diagnocure India </h1>
+        <h1 id='top'>Xamin by Diagnocure India </h1>
 
 <h2><b>Welcome to Xamin by Diagnocure India </b></h2>
 

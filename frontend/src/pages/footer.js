@@ -1,8 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./footer.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faDroplet, faMosquito, faBaby, faLungs, faPlus, faWhatsapp } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import {
   Accordion,
