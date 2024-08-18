@@ -1,4 +1,113 @@
-.headerblock {
-    z-index: 0;
-    height: 10vh;
+
+#productpage {
+  text-align: center;
+  padding: 20px;
+}
+#productbanner{
+  height: 50vh;
+  background-color: beige;
+}
+
+#productbox {
+  /* height: 90vh; */
+  margin: 6vw auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #f7f7f7;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+}
+
+#rows {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.products {
+  width: 20%;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative; /* Added */
+  min-height: 300px; /* Ensure consistent height */
+}
+
+
+.products:hover {
+
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: rgb(59, 105, 166);
+  transition: background-color 0.3s ease;
+}
+
+.products img {
+
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  transition: transform 0.3s ease;
+}
+
+
+.products h1,
+.products h2 {
+  margin: 15px;
+  transition: opacity 0.3s ease;
+  position: absolute; 
+  bottom: 20px; 
+  text-align: center;
+  width: 90%; 
+  z-index: 2; 
+}
+
+/* .products:hover img {
+  transform: scale(1.2);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+} */
+
+.products .description {
+  padding: 15px;
+  background-color: #f7f7f7;
+  border-radius: 0 0 30px 30px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.products:hover .description {
+  transform: translateY(0);
+}
+
+.products h1 {
+  font-size: 18px;
+  color: #4f4f4f;
+}
+
+.products h2 {
+  top: 20px;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+  .products {
+    width: 45%;
   }
+}
+
+@media (max-width: 480px) {
+  .products {
+    width: 90%;
+  }
+}
