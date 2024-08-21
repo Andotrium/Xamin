@@ -4,8 +4,9 @@
   padding: 20px;
 }
 #productbanner{
-  height: 50vh;
+  height: 70vh;
   background-color: beige;
+  overflow: hidden;
 }
 
 #productbox {
@@ -63,7 +64,8 @@
   margin: 15px;
   transition: opacity 0.3s ease;
   position: absolute; 
-  bottom: 20px; 
+
+  bottom: 0; 
   text-align: center;
   width: 90%; 
   z-index: 2; 
