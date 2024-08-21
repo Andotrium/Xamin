@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./products.css"
-import ComingSoon from "./coming";
 import image1 from '../media/image1.jpg'
 import image2 from '../media/image2.jpg'
 import image3 from '../media/image3.jpg'
