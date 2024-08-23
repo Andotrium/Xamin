@@ -13,6 +13,7 @@ import Updatespage from './pages/updates';
 import Footer from './pages/footer';
 import MobileHeader from './pages/mobile/mobileheader';
 import Mobilefooter from './pages/mobile/mobilefooter';
+import DengueDuoPage from './pages/productpages/dengueduo';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -51,6 +52,8 @@ root.render(
       <Route path='/contacts' element={<Contact />} />
       <Route path='/downloads' element={<Downloadpage />} />
       <Route path='/updates' element={<Updatespage />} />
+      <Route path='/dengueduo' element={<DengueDuoPage />} />
+      <Route path='dengue' element={<DenguePage />} />
     </Routes>
     </Viewport>
     </BrowserRouter>

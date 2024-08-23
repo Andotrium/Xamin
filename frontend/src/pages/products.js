@@ -12,63 +12,67 @@ import covid from '../media/covidab.png'
 import dropnews from '../media/Drop News.png'
 import productbanner from '../media/productsbanner.jpeg'
 import mobilebanner from '../media/mobileproductsbanner.jpeg'
+import { Link } from "react-router-dom";
 
 function Mobileview({ products }) {
     return (
         <>
             <div id="productpage">
                 <h1 style={{ color: 'rgb(79,79,79)' }}>The products we offer at Diagnocure(India)</h1>
-                <div id="productbox">
-                    <div id="slider">
-                        {products.map((x, index) => {
-                            if(x.row==1){
-                                return(
-                                    <>
-                                    <div className="mobileproducts">
-                                    <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                                    <h1>{x.name}</h1>
+                <div id="slider">
 
-                                    </div>
-                                    </>
-                                )
-                            }
+                    {products.map((x, index) => {
+                        if (x.row == 1) {
+                            return (
+                                <>
+                                    <nav>
+                                        <Link to={x.path} style={{ textDecoration: "none" }}>
+                                            <div className="mobileproducts">
+                                                <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
+                                                <h1>{x.name}</h1>
+                                            </div>
+                                        </Link>
+                                    </nav>
+                                </>
+                            )
+                        }
 
-                        })}
-                    </div>
-                    <div id="slider">
-                        {products.map((x, index) => {
-                            if(x.row==2){
-                                return(
-                                    <>
-                                    <div className="mobileproducts">
-                                    <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                                    <h1>{x.name}</h1>
-
-                                    </div>
-                                    </>
-                                )
-                            }
-
-                        })}
-                    </div>
-                    <div id="slider">
-                        {products.map((x, index) => {
-                            if(x.row==3){
-                                return(
-                                    <>
-                                    <div className="mobileproducts">
-                                    <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                                    <h1>{x.name}</h1>
-
-                                    </div>
-                                    </>
-                                )
-                            }
-
-                        })}
-                    </div>
-
+                    })}
                 </div>
+                <div id="slider">
+                    {products.map((x, index) => {
+                        if (x.row == 2) {
+                            return (
+                                <>
+                                    <div className="mobileproducts">
+                                        <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
+                                        <h1>{x.name}</h1>
+
+                                    </div>
+                                </>
+                            )
+                        }
+
+                    })}
+                </div>
+                <div id="slider">
+                    {products.map((x, index) => {
+                        if (x.row == 3) {
+                            return (
+                                <>
+                                    <div className="mobileproducts">
+                                        <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
+                                        <h1>{x.name}</h1>
+
+                                    </div>
+                                </>
+                            )
+                        }
+
+                    })}
+                </div>
+
+
 
             </div>
         </>
@@ -89,13 +93,16 @@ function Desktopview({ products }) {
                                     <div className="products" onMouseEnter={() => setindex(index)} onMouseLeave={() => setindex(null)}>
 
                                         {hoverindex === index ?
-                                            <h2>{x.description}</h2> :
+                                                <h2>{x.description}</h2>
+                                            :
                                             <>
                                                 <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
                                                 <h1>{x.name}</h1>
                                             </>
                                         }
+
                                     </div>
+
                                 </>
                             )
 
@@ -115,19 +122,22 @@ export default function Productpage() {
         row: 1,
         name: 'Xamin Dengue Duo',
         description: "Xamin Dengue Duo is an immunochromatographic assay for the detection of NS1 antigen and Dengue virus-specific IgG/IgM antibodies in human Serum/Plasma and Whole Blood. By detecting the NS1 antigen, not only the early infection can be detected, but also Dengue virus-specific IgG and IgM can be detected at the same time. Screening test results can be obtained within 5-20 minutes with high sensitivity and specificity, it is intended as an aid in the earlier diagnosis of Dengue infections.",
-        image: dengueDuo
+        image: dengueDuo,
+        path: '/dengueduo'
     },
     {
         row: 1,
         name: 'Xamin Dengue',
         description: "Xamin Dengue IgG/IgM qualitatively analyzes IgG and IgM antibodies specific to Dengue virus in Serum/Plasma and Whole Blood using immunochromatography technique. By detecting IgG and IgM specific to Dengue virus, the primary and secondary Dengue virus infections can be discriminated, and the screening test result can be obtained within 5-20 minutes with its high sensitivity and specificity. It is intended as an aid in the earlier diagnosis of Dengue Infection.",
-        image: dengue
+        image: dengue,
+        path:'/dengue'
     },
     {
         row: 1,
         name: 'Xamin Dengue Day1',
         description: "Xamin Dengue Day 1 qualitatively analyzes Ns1 antigens specific to Dengue virus in Serum/Plasma and Whole Blood using immunochromatography technique. By detecting Dengue Ns1 antigens, the early infection status of Dengue virus can be discriminated, and the screening test result can be obtained within 5-20 minutes with its high sensitivity and specificity. It is intended as an aid in the earlier diagnosis of Dengue Infection.",
-        image: dengueDay1
+        image: dengueDay1,
+        path: 'dengueday1'
     },
     {
         row: 2,
