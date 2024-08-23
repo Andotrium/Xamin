@@ -14,6 +14,9 @@ import Footer from './pages/footer';
 import MobileHeader from './pages/mobile/mobileheader';
 import Mobilefooter from './pages/mobile/mobilefooter';
 import DengueDuoPage from './pages/productpages/dengueduo';
+import DenguePage from './pages/productpages/dengue';
+import DengueDay1Page from './pages/productpages/dengueday1';
+import MalariaPage from './pages/productpages/malaria';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -53,7 +56,9 @@ root.render(
       <Route path='/downloads' element={<Downloadpage />} />
       <Route path='/updates' element={<Updatespage />} />
       <Route path='/dengueduo' element={<DengueDuoPage />} />
-      <Route path='dengue' element={<DenguePage />} />
+      <Route path='/dengue' element={<DenguePage />} />
+      <Route path='/denguedayone' element={<DengueDay1Page />} />
+      <Route path='/malaria' element={<MalariaPage />} />
     </Routes>
     </Viewport>
     </BrowserRouter>

@@ -44,11 +44,14 @@ function Mobileview({ products }) {
                         if (x.row == 2) {
                             return (
                                 <>
-                                    <div className="mobileproducts">
-                                        <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                                        <h1>{x.name}</h1>
-
-                                    </div>
+                                    <nav>
+                                        <Link to={x.path} style={{ textDecoration: "none" }}>
+                                            <div className="mobileproducts">
+                                                <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
+                                                <h1>{x.name}</h1>
+                                            </div>
+                                        </Link>
+                                    </nav>
                                 </>
                             )
                         }
@@ -137,13 +140,14 @@ export default function Productpage() {
         name: 'Xamin Dengue Day1',
         description: "Xamin Dengue Day 1 qualitatively analyzes Ns1 antigens specific to Dengue virus in Serum/Plasma and Whole Blood using immunochromatography technique. By detecting Dengue Ns1 antigens, the early infection status of Dengue virus can be discriminated, and the screening test result can be obtained within 5-20 minutes with its high sensitivity and specificity. It is intended as an aid in the earlier diagnosis of Dengue Infection.",
         image: dengueDay1,
-        path: 'dengueday1'
+        path: '/denguedayone'
     },
     {
         row: 2,
         name: 'Xamin Malaria',
         description: 'Xamin Malaria Pf Ag is a product that qualitatively detects Plasmodium falciparum antigens in human whole blood using immunochromatography technique. The target antigen is Histidine-Rich Protein II (HRP-II), and the screening test result can be obtained within 5-20 minutes with its high sensitivity and specificity. It is intended as an aid in the earlier diagnosis of Malaria Pf Infection.',
-        image: malaria
+        image: malaria,
+        path:'/malaria'
     },
     {
         row: 2,
