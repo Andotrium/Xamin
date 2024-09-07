@@ -94,15 +94,23 @@ function Desktopview({ products }) {
                             return (
                                 <>
                                     <div className="products" onMouseEnter={() => setindex(index)} onMouseLeave={() => setindex(null)}>
-
+                                        <nav>
+                                            <Link to={x.path}>
+                                            
                                         {hoverindex === index ?
                                                 <h2>{x.description}</h2>
                                             :
                                             <>
+                                            
+
                                                 <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
                                                 <h1>{x.name}</h1>
+
+
                                             </>
                                         }
+                                            </Link>
+                                        </nav>
 
                                     </div>
 
