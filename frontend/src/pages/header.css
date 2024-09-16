@@ -1,3 +1,10 @@
+#popovertext {
+    color: black;
+    font-size: medium;
+    background-color: white; /* Set a background color */
+    border-radius: 10px;
+}
+
 .header,
 .scrollheader {
     width: 100vw;

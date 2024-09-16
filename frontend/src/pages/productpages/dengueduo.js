@@ -5,6 +5,14 @@ import paze2 from '../../media/DengueDuopage2.png'
 import paze3 from '../../media/DengueDuopage3.png'
 import stockimage from '../../media/Dengue.png'
 import ImageScroller from "../../tools/imagescroller";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Box,
+} from '@chakra-ui/react'
 
 const images = [
   { id: 1, src: stockimage, alt: 'Image 1' },
@@ -52,9 +60,44 @@ function DesktopView() {
       </div>
       <div id="lowerpage">
         <div id="lowerpageimg">
+          <Accordion allowToggle>
+            <AccordionItem>
+          <AccordionButton className="dropdownbutton">
+                <Box flex="1" textAlign="left">
+                  <h2>Test Description</h2>
+                </Box>
+                <Box as="span" fontSize="30px" color="rgb(59, 105, 166)">+</Box>
+              </AccordionButton>
+              <AccordionPanel>
         <img src={paze1} style={{ width: "100%" }}></img>
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+            <AccordionButton className="dropdownbutton">
+                <Box flex="1" textAlign="left">
+                  <h2>Test Result</h2>
+                </Box>
+                <Box as="span" fontSize="30px" color="rgb(59, 105, 166)">+</Box>
+              </AccordionButton>
+              <AccordionPanel>
         <img src={paze2} style={{ width: "100%",marginTop:"30px" }}></img>
+        <h3 style={{color:'red'}}><b>*ATTENTION:</b> Serum/Plasma and Whole blood tests are different variants and hence shall be
+        ordered as per the demand for the particular variant.</h3>
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem>
+            <AccordionButton className="dropdownbutton">
+                <Box flex="1" textAlign="left">
+                  <h2>Ordering Information</h2>
+                </Box>
+                <Box as="span" fontSize="30px" color="rgb(59, 105, 166)">+</Box>
+              </AccordionButton>
+              <AccordionPanel>
         <img src={paze3} style={{ width: "100%",marginTop:"30px",marginBottom:"30px" }}></img>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          
         </div>
       </div>
     </>
