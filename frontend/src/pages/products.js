@@ -117,7 +117,6 @@ function Desktopview({ products }) {
                         <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faBacteria} />
                         <h3>GastroIntestinal</h3>
                     </div>
-                    {/* <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faDroplet} /> */}
 
                 </div>
                 <div id="rows">

@@ -1,9 +1,9 @@
-
 #productpage {
   text-align: center;
   padding: 20px;
 }
-#productbanner{
+
+#productbanner {
   height: 70vh;
   background-color: beige;
   overflow: hidden;
@@ -38,8 +38,10 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  position: relative; /* Added */
-  min-height: 300px; /* Ensure consistent height */
+  position: relative;
+  /* Added */
+  min-height: 300px;
+  /* Ensure consistent height */
 }
 
 
@@ -63,12 +65,12 @@
 .products h2 {
   margin: 15px;
   transition: opacity 0.3s ease;
-  position: absolute; 
+  position: absolute;
 
-  bottom: 0; 
+  bottom: 0;
   text-align: center;
-  width: 90%; 
-  z-index: 2; 
+  width: 90%;
+  z-index: 2;
 }
 
 
@@ -106,17 +108,20 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  position: relative; /* Added */
+  position: relative;
+  /* Added */
 }
-.mobileproducts h1{
+
+.mobileproducts h1 {
   margin: 15px;
   font-size: medium;
   color: #4f4f4f;
   font-weight: 400;
-  bottom: 0; 
+  bottom: 0;
   text-align: center;
-  width: 90%; 
+  width: 90%;
 }
+
 #slider {
   display: flex;
   flex-direction: row;
@@ -140,6 +145,7 @@
     width: 90%;
   }
 }
+
 #categories {
   padding: 10px;
   display: flex;
@@ -150,16 +156,19 @@
   background-color: #afaeae53;
 
 }
-#categories h3{
-  color:#4f4f4f;
+
+#categories h3 {
+  color: #4f4f4f;
   font-weight: 400;
-  
+
 }
+
 .categorynames {
-cursor:pointer;
-padding: 25px;
-border-radius: 10px;
+  cursor: pointer;
+  padding: 25px;
+  border-radius: 10px;
 }
+
 .categorynames:hover {
   background-color: #92919153;
 }

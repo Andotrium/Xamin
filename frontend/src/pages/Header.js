@@ -51,32 +51,7 @@ function DesktopDropdown({producthover}) {
       </nav>
       <nav>
         <Link to={"/products"} style={{textDecoration:"none"}}>
-        <Popover>
-  <PopoverTrigger>
     <h2>Our Products</h2>
-  </PopoverTrigger>
-  <PopoverContent color='white.800' bg='blue.800' borderColor='blue.700' borderRadius='12px' maxWidth='300px' zIndex='10'>
-    <PopoverArrow bg='blue.700' />
-    <PopoverCloseButton color='white' width='10px' right='0' bg='transparent' border='0px red solid' />
-    <PopoverHeader fontWeight='bold' fontSize='18px' borderBottom='1px solid white' textAlign='center'>
-      
-    </PopoverHeader>
-    <PopoverBody display='flex' flexDirection='column' alignItems='center' justifyContent='center' padding='16px'>
-      <div id="popovertext" style={{ textAlign: 'center', lineHeight: '1.6', fontSize: '14px', marginBottom: '12px' }}>
-        <strong>Choose a category:</strong><br />
-        <span style={{ display: 'block', marginTop: '8px' }}>Respiratory</span>
-        <span style={{ display: 'block', marginTop: '8px' }}>Vector Borne Disease</span>
-        <span style={{ display: 'block', marginTop: '8px' }}>Blood Borne Disease</span>
-        <span style={{ display: 'block', marginTop: '8px' }}>Hepatitis</span>
-        <span style={{ display: 'block', marginTop: '8px' }}>Gastorintestinal Disease</span>
-        <span style={{ display: 'block', marginTop: '8px' }}>Cardiac Marker</span>
-        <span style={{ display: 'block', marginTop: '8px' }}>Fertility</span>
-      </div>
-    </PopoverBody>
-  </PopoverContent>
-</Popover>
-
-
 
       {/* <h2>Our Products</h2> */}
         </Link>
