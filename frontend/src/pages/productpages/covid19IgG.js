@@ -93,7 +93,7 @@ function DesktopView() {
     )
   }
 
-export default function MalariaPage(){
+export default function Covid19(){
     return(
         <>
         <div style={{height:"10vh"}}></div>

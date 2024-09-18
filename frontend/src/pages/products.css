@@ -123,6 +123,10 @@
   overflow-x: scroll;
 }
 
+/* #rows h1{
+  border: 1px black solid;
+} */
+
 
 
 @media (max-width: 768px) {
@@ -135,4 +139,27 @@
   .products {
     width: 90%;
   }
+}
+#categories {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: 1px red solid; */
+  border-radius: 50px;
+  background-color: #afaeae53;
+
+}
+#categories h3{
+  color:#4f4f4f;
+  font-weight: 400;
+  
+}
+.categorynames {
+cursor:pointer;
+padding: 25px;
+border-radius: 10px;
+}
+.categorynames:hover {
+  background-color: #92919153;
 }

@@ -17,6 +17,15 @@ import DengueDuoPage from './pages/productpages/dengueduo';
 import DenguePage from './pages/productpages/dengue';
 import DengueDay1Page from './pages/productpages/dengueday1';
 import MalariaPage from './pages/productpages/malaria';
+import MalariaPfPvPage from './pages/productpages/malariaPf';
+import MalariaPfPanPage from './pages/productpages/malariaPfPan';
+import Hiv from './pages/productpages/Hiv';
+import HBs from './pages/productpages/hbsag';
+import HCV from './pages/productpages/hcv';
+import Syphilis from './pages/productpages/syphilis';
+import Covid19 from './pages/productpages/covid19IgG';
+import Typhoid from './pages/productpages/typhoid';
+import DropNews from './pages/productpages/dropnews';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -55,10 +64,19 @@ root.render(
       <Route path='/contacts' element={<Contact />} />
       <Route path='/downloads' element={<Downloadpage />} />
       <Route path='/updates' element={<Updatespage />} />
-      <Route path='/dengueduo' element={<DengueDuoPage />} />
-      <Route path='/dengue' element={<DenguePage />} />
-      <Route path='/denguedayone' element={<DengueDay1Page />} />
-      <Route path='/malaria' element={<MalariaPage />} />
+      <Route path='/products/dengueduo' element={<DengueDuoPage />} />
+      <Route path='/products/dengue' element={<DenguePage />} />
+      <Route path='/products/denguedayone' element={<DengueDay1Page />} />
+      <Route path='/products/malaria' element={<MalariaPage />} />
+      <Route path='/products/malariaPf' element={<MalariaPfPvPage />} />
+      <Route path='/products/malariaPfPan' element={<MalariaPfPanPage />} />
+      <Route path='/products/hiv' element={<Hiv />} />
+      <Route path='products/hbsag' element={<HBs />} />
+      <Route path='/products/hcv' element={<HCV />} />
+      <Route path='/products/syphilis' element={<Syphilis />} />
+      <Route path='/products/covid19' element={<Covid19 />} />
+      <Route path='/products/typhoid' element={<Typhoid />} />
+      <Route path='/products/dropnews' element={<DropNews />} />
     </Routes>
     </Viewport>
     </BrowserRouter>

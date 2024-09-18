@@ -88,6 +88,74 @@ margin-left: 15px;
 #info button:hover {
     background-color: #0056b3;
 }
+
+/* for mobile view */
+#imagemobile {
+
+    margin-top: 10%;
+}
+#information{
+
+    display: flex;
+    justify-content: end;
+}
+#infomobile {
+
+    margin: 10%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+
+}
+
+#infomobile h1 {
+
+    font-size: 28px;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 0px;
+
+}
+
+#infomobile h2 {
+font-size: 14px;
+color: #666;
+line-height: 1.5;
+font-weight: 100;
+margin-left: 15px;
+}
+
+#infomobile h3{
+    margin-left: 20px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#infomobile h4 {
+    font-size: 18px;
+    color: rgb(59, 105, 166);
+    margin-top: 0px;
+    margin-left: 0;
+    margin-bottom: 0px;
+    /* margin-left: px; */
+    font-weight: bold;
+}
+
+#infomobile button {
+    background-color: rgb(59, 105, 166);
+    color: white;
+    margin-left: 15px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 #lowerpage{
     background-color: #f9f9f9;
     width: 100%;

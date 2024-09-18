@@ -93,7 +93,7 @@ function DesktopView() {
     )
   }
 
-export default function MalariaPage(){
+export default function Syphilis(){
     return(
         <>
         <div style={{height:"10vh"}}></div>
