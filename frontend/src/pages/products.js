@@ -14,11 +14,11 @@ import productbanner from '../media/productsbanner.jpeg'
 import mobilebanner from '../media/mobileproductsbanner.jpeg'
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDroplet, faMosquito, faBaby, faLungs, faHeart, faBacteria, faWhatsapp } from "@fortawesome/free-solid-svg-icons";
+import { faDroplet, faMosquito, faBaby, faLungs, faHeart, faBacteria } from "@fortawesome/free-solid-svg-icons";
 
 
 function Mobileview({ products }) {
-    const [hoverindex, setindex] = useState(null);
+    // const [hoverindex, setindex] = useState(null);
     const [show, setshow] = useState(null)
     return (
         <>
@@ -53,29 +53,20 @@ function Mobileview({ products }) {
                 </div>
                 <div id="rows">
                     {products.map((x, index) => {
-                        if (x.row == show) {
-                            return (
-                                <>
-                                    <div className="products" onMouseEnter={() => setindex(index)} onMouseLeave={() => setindex(null)}>
-                                        <nav>
-                                            <Link to={x.path}>
-
-                                                {hoverindex === index ?
-                                                    <h2>{x.description}</h2>
-                                                    :
-                                                    <>
-                                                        <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                                                        <h1>{x.name}</h1>
-                                                    </>
-                                                }
-                                            </Link>
-                                        </nav>
-
-                                    </div>
-
-                                </>
-                            )
-                        }
+if (x.row === show) {
+    return (
+        <>
+            <nav>
+                <Link to={x.path} style={{ textDecoration: "none" }}>
+                    <div className="mobileproducts">
+                        <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
+                        <h1>{x.name}</h1>
+                    </div>
+                </Link>
+            </nav>
+        </>
+    )
+}
 
                     })}
                 </div>
@@ -184,7 +175,7 @@ function Desktopview({ products }) {
                 </div>
                 <div id="rows">
                     {products.map((x, index) => {
-                        if (x.row == show) {
+                        if (x.row === show) {
                             return (
                                 <>
                                     <div className="products" onMouseEnter={() => setindex(index)} onMouseLeave={() => setindex(null)}>
