@@ -148,6 +148,7 @@
 
 #categories {
   padding: 10px;
+  overflow-x: scroll;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

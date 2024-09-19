@@ -18,9 +18,72 @@ import { faDroplet, faMosquito, faBaby, faLungs, faHeart, faBacteria, faWhatsapp
 
 
 function Mobileview({ products }) {
+    const [hoverindex, setindex] = useState(null);
+    const [show, setshow] = useState(null)
     return (
         <>
             <div id="productpage">
+                <h1 style={{ color: 'rgb(79,79,79)' }}>The products we offer at Diagnocure(India)</h1>
+                <div id="categories">
+                    <div className="categorynames" onClick={() => { setshow(1) }}>
+                        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faLungs} />
+                        <h3>Respiratory</h3>
+                    </div>
+                    <div className="categorynames" onClick={() => { setshow(2) }}>
+                        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faMosquito} />
+                        <h3>Vector Borne</h3>
+                    </div>
+                    <div className="categorynames" onClick={() => { setshow(3) }}>
+                        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faDroplet} />
+                        <h3>Blood Borne</h3>
+                    </div>
+                    <div className="categorynames" onClick={() => { setshow(4) }}>
+                        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faBaby} />
+                        <h3>Fertility</h3>
+                    </div>
+                    <div className="categorynames" onClick={() => { setshow(5) }}>
+                        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faHeart} />
+                        <h3>Cardiac Marker</h3>
+                    </div>
+                    <div className="categorynames" onClick={() => { setshow(6) }}>
+                        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faBacteria} />
+                        <h3>GastroIntestinal</h3>
+                    </div>
+
+                </div>
+                <div id="rows">
+                    {products.map((x, index) => {
+                        if (x.row == show) {
+                            return (
+                                <>
+                                    <div className="products" onMouseEnter={() => setindex(index)} onMouseLeave={() => setindex(null)}>
+                                        <nav>
+                                            <Link to={x.path}>
+
+                                                {hoverindex === index ?
+                                                    <h2>{x.description}</h2>
+                                                    :
+                                                    <>
+                                                        <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
+                                                        <h1>{x.name}</h1>
+                                                    </>
+                                                }
+                                            </Link>
+                                        </nav>
+
+                                    </div>
+
+                                </>
+                            )
+                        }
+
+                    })}
+                </div>
+                {/* <div id="productbox">
+
+                </div> */}
+            </div>
+            {/* <div id="productpage">
                 <h1 style={{ color: 'rgb(79,79,79)' }}>The products we offer at Diagnocure(India)</h1>
                 <div id="slider">
 
@@ -80,7 +143,7 @@ function Mobileview({ products }) {
 
 
 
-            </div>
+            </div> */}
         </>
     )
 }
