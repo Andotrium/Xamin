@@ -22,9 +22,9 @@ function Mobileview({ products }) {
     const [show, setshow] = useState(null)
     return (
         <>
-            <div id="productpage">
+            <div id="mobileproductpage">
                 <h1 style={{ color: 'rgb(79,79,79)' }}>The products we offer at Diagnocure(India)</h1>
-                <div id="categories">
+                <div id="mobilecategories">
                     <div className="categorynames" onClick={() => { setshow(1) }}>
                         <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faLungs} />
                         <h3>Respiratory</h3>
@@ -53,26 +53,23 @@ function Mobileview({ products }) {
                 </div>
                 <div id="rows">
                     {products.map((x, index) => {
-if (x.row === show) {
-    return (
-        <>
-            <nav>
-                <Link to={x.path} style={{ textDecoration: "none" }}>
-                    <div className="mobileproducts">
-                        <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                        <h1>{x.name}</h1>
-                    </div>
-                </Link>
-            </nav>
-        </>
-    )
-}
+                        if (x.row === show) {
+                            return (
+                                <>
+                                    <nav>
+                                        <Link to={x.path} style={{ textDecoration: "none" }}>
+                                            <div className="mobileproducts">
+                                                <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
+                                                <h1>{x.name}</h1>
+                                            </div>
+                                        </Link>
+                                    </nav>
+                                </>
+                            )
+                        }
 
                     })}
                 </div>
-                {/* <div id="productbox">
-
-                </div> */}
             </div>
             {/* <div id="productpage">
                 <h1 style={{ color: 'rgb(79,79,79)' }}>The products we offer at Diagnocure(India)</h1>

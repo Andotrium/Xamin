@@ -1,6 +1,7 @@
 #productpage {
   text-align: center;
   padding: 20px;
+
 }
 
 #productbanner {
@@ -161,6 +162,28 @@
 #categories h3 {
   color: #4f4f4f;
   font-weight: 400;
+
+}
+
+#mobilecategories {
+  padding: 10px;
+  width: 100%;
+
+  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+
+  background-color: #afaeae53;
+}
+#mobilecategories h3 {
+  color: #4f4f4f;
+  font-weight: 400;
+}
+#mobileproductpage{
+  text-align: center;
+  overflow-x: hidden;
 
 }
 
