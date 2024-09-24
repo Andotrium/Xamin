@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import banner1 from "./media/desktopbanner.jpg"
 import banner2 from "./media/mobilebanner.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDroplet, faMosquito, faBaby, faLungs } from "@fortawesome/free-solid-svg-icons";
+import { faDroplet, faMosquito, faBaby, faLungs, faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 
 function AboutUs() {
@@ -50,16 +51,43 @@ function AboutUs() {
   )
 }
 function MobileBannerwrap() {
+  const [scrollindex, setscrollindex] = useState(0);
+  const info = [
+    {
+      icon: faDroplet,
+      h1: 'Blood Borne',
+      h2: 'Our Blood Borne IVD kits provide precise detection of blood-borne pathogens, ensuring timely and accurate diagnoses for effective treatment and management.'
+    },
+    {
+      icon: faMosquito,
+      h1: 'Vector Borne',
+      h2: 'Our Vector Borne IVD kits provide accurate detection of diseases transmitted by vectors such as mosquitoes and ticks, aiding in the early diagnosis and effective treatment of conditions like malaria and dengue.'
+    },
+    {
+      icon: faBaby,
+      h1: 'Fertility',
+      h2: 'Our Pregnancy IVD kits offer reliable and rapid results, helping individuals and healthcare professionals make informed decisions during the crucial stages of pregnancy.'
+    },
+    {
+      icon: faLungs,
+      h1: "Respiratory",
+      h2: 'Our Respiratory IVD kits, including COVID-19 test kits, deliver accurate diagnostics for a range of respiratory conditions, enabling prompt and effective medical intervention.'
+    }
+
+  ];
   return (
     <>
+
       <div className="outerwrap">
+        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)",fontSize: '1em', padding: '15px', zIndex: "1" }} icon={faArrowUp} onClick={() => { scrollindex === 0 ? setscrollindex(3) : setscrollindex(scrollindex - 1) }} />
         <div className="wrap">
           <div className="box1">
-            <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={faDroplet} />
-            <h1>Blood Borne</h1>
-            <h2>Our Blood Borne IVD kits provide precise detection of blood-borne pathogens, ensuring timely and accurate diagnoses for effective treatment and management.</h2>
+            <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)", fontSize: '1.8em' }} icon={info[scrollindex].icon} />
+            <h1>{info[scrollindex].h1}</h1>
+            <h2>{info[scrollindex].h2}</h2>
           </div>
         </div>
+        <FontAwesomeIcon style={{ color: "rgb(59, 105, 166)",fontSize: '1em', padding: '15px', zIndex: '1' }} icon={faArrowDown} onClick={() => { scrollindex === 3 ? setscrollindex(0) : setscrollindex(scrollindex + 1) }} />
       </div>
     </>
   )
@@ -123,11 +151,10 @@ export default function Myapp() {
       <div className="banner">
         <img src={isMobile ? banner2 : banner1} style={{ width: "100%" }}></img>
       </div>
-      <div style={isMobile?{height:"550px"}:{ height: "45vh" }}></div>
+      <div style={isMobile ? { height: "550px" } : { height: "45vh" }}></div>
       <Bannerwrap isMobile={isMobile} />
       <div style={{ height: "0px" }}></div>
       <AboutUs />
-
     </>
   );
 }
