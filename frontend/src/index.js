@@ -26,6 +26,7 @@ import Syphilis from './pages/productpages/syphilis';
 import Covid19 from './pages/productpages/covid19IgG';
 import Typhoid from './pages/productpages/typhoid';
 import DropNews from './pages/productpages/dropnews';
+import { Analytics } from "@vercel/analytics/react"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -55,6 +56,7 @@ function Viewport(props){
 
 root.render(
   <React.StrictMode>
+    <Analytics />
     <BrowserRouter>
     <Viewport>
     <Routes>
