@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useState,useEffect} from "react";
 import page1 from '../../media/dengueday1page1.png'
 import './dengueduo.css'
 import paze1 from '../../media/DengueDuopage1.png'
@@ -33,17 +33,16 @@ function DesktopView() {
             <ImageScroller images={images} />
           </div>
           <div id="info">
-            <h1>Xamin Dengue</h1>
-            <h4>One Step Dengue IgG/IgM (Ab) Rapid Test Device</h4>
+            <h1>Xamin Dengue Day 1</h1>
+            <h4>One Step Dengue NS1 (Ag) Rapid Test Device</h4>
             <h3>
-              Xamin Dengue IgG/IgM qualitatively analyzes IgG and IgM antibodies specific to Dengue virus in Serum/Plasma and Whole Blood using immunochromatography technique. By detecting IgG and IgM specific to Dengue virus, the primary and secondary Dengue virus infections can be discriminated, and the screening test result can be obtained within 5-20 minutes with its high sensitivity and specificity. It is intended as an aid in the earlier diagnosis of Dengue Infection.
-            </h3>
+            Xamin Dengue Day 1 qualitatively analyzes Ns1 antigens specific to Dengue virus in Serum/Plasma and Whole Blood using immunochromatography technique. By detecting Dengue Ns1 antigens, the early infection status of Dengue virus can be discriminated, and the screening test result can be obtained within 5-20 minutes with its high sensitivity and specificity. It is intended as an aid in the earlier diagnosis of Dengue Infection.            </h3>
             <button>Download PDF</button>
             <h2 style={{ color: "red" }}>Note:</h2>
   <ul>
-    <li> Confirm results with other available higher techniques before reporting.</li>
-    <li>This test is for in vitro diagnostic use only.</li>
-    <li>Detection of antibodies against all four dengue virus serotypes.</li>
+    <li>Confirm results with other available higher techniques before reporting.</li>
+    <li>This test is for in vitro diagnostic use only</li>
+    <li>Detection of antigens against all four dengue virus serotypes.</li>
   </ul>
           </div>
         </div>
@@ -93,12 +92,97 @@ function DesktopView() {
     )
   }
 
-export default function DengueDay1Page(){
+  function MobileView(){
     return(
-        <>
-        <div style={{height:'10vh'}}></div>
-        <DesktopView />
-
-        </>
+      <>
+      <div id="imagemobile">
+  
+        <ImageScroller images={images} />
+      </div>
+  
+  
+        <div id="infomobile">
+        <h1>Xamin Dengue Day 1</h1>
+            <h4>One Step Dengue NS1 (Ag) Rapid Test Device</h4>
+            <h3>
+            Xamin Dengue Day 1 qualitatively analyzes Ns1 antigens specific to Dengue virus in Serum/Plasma and Whole Blood using immunochromatography technique. By detecting Dengue Ns1 antigens, the early infection status of Dengue virus can be discriminated, and the screening test result can be obtained within 5-20 minutes with its high sensitivity and specificity. It is intended as an aid in the earlier diagnosis of Dengue Infection.            </h3>
+            <button>Download PDF</button>
+            <h2 style={{ color: "red" }}>Note:</h2>
+  <ul>
+    <li>Confirm results with other available higher techniques before reporting.</li>
+    <li>This test is for in vitro diagnostic use only</li>
+    <li>Detection of antigens against all four dengue virus serotypes.</li>
+  </ul>
+  
+            {/* <h4>
+              Product Description
+            </h4> */}
+          </div>
+  
+        <div id="lowerpage">
+          <div id="lowerpageimg">
+            <Accordion allowToggle>
+              <AccordionItem>
+            <AccordionButton className="dropdownbutton">
+                  <Box flex="1" textAlign="left">
+                    <h2>Test Description</h2>
+                  </Box>
+                  <Box as="span" fontSize="30px" color="rgb(59, 105, 166)">+</Box>
+                </AccordionButton>
+                <AccordionPanel>
+          <img src={paze1} style={{ width: "100%" }}></img>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem>
+              <AccordionButton className="dropdownbutton">
+                  <Box flex="1" textAlign="left">
+                    <h2>Test Result</h2>
+                  </Box>
+                  <Box as="span" fontSize="30px" color="rgb(59, 105, 166)">+</Box>
+                </AccordionButton>
+                <AccordionPanel>
+          <img src={paze2} style={{ width: "100%",marginTop:"30px" }}></img>
+          <h3 style={{color:'red'}}><b>*ATTENTION:</b> Serum/Plasma and Whole blood tests are different variants and hence shall be
+          ordered as per the demand for the particular variant.</h3>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem>
+              <AccordionButton className="dropdownbutton">
+                  <Box flex="1" textAlign="left">
+                    <h2>Ordering Information</h2>
+                  </Box>
+                  <Box as="span" fontSize="30px" color="rgb(59, 105, 166)">+</Box>
+                </AccordionButton>
+                <AccordionPanel>
+          <img src={paze3} style={{ width: "100%",marginTop:"30px",marginBottom:"30px" }}></img>
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+            
+          </div>
+        </div>
+  
+      </>
     )
+  }
+
+export default function DengueDay1Page(){
+  const [width,setwidth] = useState(window.innerWidth);
+  function handlewindowresize(){
+    setwidth(window.innerWidth);
+  }
+  useEffect(()=>{
+    window.addEventListener('resize', handlewindowresize);
+  },[]
+  )
+  const isMobile = width <= 768;
+  return (
+    <>
+      <div style={{ height: "10vh" }}></div>
+      {isMobile?
+      <MobileView />
+      :
+    <DesktopView />}
+    </>
+  )
 }

@@ -4,12 +4,8 @@ import React, { useEffect, useState } from "react";
 import banner1 from "./media/desktopbanner.jpg"
 import banner2 from "./media/mobilebanner.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faDroplet, faMosquito, faBaby, faLungs, faPlus, faWhatsapp } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import Navabout from "./pages/aboutus";
+import { faDroplet, faMosquito, faBaby, faLungs } from "@fortawesome/free-solid-svg-icons";
+
 
 function AboutUs() {
 

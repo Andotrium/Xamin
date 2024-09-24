@@ -91,6 +91,7 @@ body {
 
 
 .box1, .box2, .box3, .box4 {
+  /* border: 1px red solid; */
   flex: 1; /* Allows boxes to be evenly spaced */
   padding: 20px; /* Add padding for better text spacing */
   position: relative; /* Required for the pseudo-element to be positioned relative to this element */
