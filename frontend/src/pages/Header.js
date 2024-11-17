@@ -2,23 +2,10 @@ import "./header.css";
 import React, { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faDroplet, faMosquito, faBaby, faLungs, faPlus, faWhatsapp } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
+
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
-  Box
-} from '@chakra-ui/react'
+
 
 function Productsmenu(){
   return (

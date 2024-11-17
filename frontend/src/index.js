@@ -27,6 +27,7 @@ import Covid19 from './pages/productpages/covid19IgG';
 import Typhoid from './pages/productpages/typhoid';
 import DropNews from './pages/productpages/dropnews';
 import { Analytics } from "@vercel/analytics/react"
+import Main from './pages/testproducts';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -79,6 +80,7 @@ root.render(
       <Route path='/products/covid19' element={<Covid19 />} />
       <Route path='/products/typhoid' element={<Typhoid />} />
       <Route path='/products/dropnews' element={<DropNews />} />
+      <Route path='/testing' element={<Main />} />
     </Routes>
     </Viewport>
     </BrowserRouter>

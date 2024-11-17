@@ -71,67 +71,7 @@ function Mobileview({ products }) {
                     })}
                 </div>
             </div>
-            {/* <div id="productpage">
-                <h1 style={{ color: 'rgb(79,79,79)' }}>The products we offer at Diagnocure(India)</h1>
-                <div id="slider">
-
-                    {products.map((x, index) => {
-                        if (x.row == 1) {
-                            return (
-                                <>
-                                    <nav>
-                                        <Link to={x.path} style={{ textDecoration: "none" }}>
-                                            <div className="mobileproducts">
-                                                <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                                                <h1>{x.name}</h1>
-                                            </div>
-                                        </Link>
-                                    </nav>
-                                </>
-                            )
-                        }
-
-                    })}
-                </div>
-                <div id="slider">
-                    {products.map((x, index) => {
-                        if (x.row == 2) {
-                            return (
-                                <>
-                                    <nav>
-                                        <Link to={x.path} style={{ textDecoration: "none" }}>
-                                            <div className="mobileproducts">
-                                                <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                                                <h1>{x.name}</h1>
-                                            </div>
-                                        </Link>
-                                    </nav>
-                                </>
-                            )
-                        }
-
-                    })}
-                </div>
-                <div id="slider">
-                    {products.map((x, index) => {
-                        if (x.row == 3) {
-                            return (
-                                <>
-                                    <div className="mobileproducts">
-                                        <img style={{ width: '100%', borderRadius: '30px' }} src={x.image} alt="product"></img>
-                                        <h1>{x.name}</h1>
-
-                                    </div>
-                                </>
-                            )
-                        }
-
-                    })}
-                </div>
-
-
-
-            </div> */}
+            {}
         </>
     )
 }
